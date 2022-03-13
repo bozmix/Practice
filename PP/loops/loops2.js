@@ -106,8 +106,20 @@ Output: The array is symmetric.
 
 Input array: [3, 4, 12, 8]
 	Output: The array isn’t symmetric.
+*/
 
+var a = [3, 4, 12, 8];
+var output = 'The array is symmetric';
 
+for(var i = 0; i < a.length / 2; i++){
+    if(a[i] !== a[a.length - 1 - i]){
+        output = 'The array isn\'t symmetric';
+        break;
+    }
+}
+console.log(output);
+
+/*
 Write a program that intertwines two arrays. You can assume the arrays are of the same length. 
 Input arrays: [4, 5, 6, 2], [3, 8, 11, 9]
 Output array: [4, 3, 5, 8, 6, 11, 2, 9]
