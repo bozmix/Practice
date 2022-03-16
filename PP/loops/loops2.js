@@ -178,19 +178,29 @@ Input: e = 78, p = 3, a = [2, -2, 33, 12, 5, 8]
 Output: [2, -2, 33, 78, 12, 5, 8]
 */
 
-var e = 78, p = 0, a = [2, -2, 33, 12, 5, 8];
+var e = 78, p = -1, a = [2, -2, 33, 12, 5, 8];
 var j = 0;
 var out = [];
 
-for(var i = 0; i < a.length; i++){
+for(var i = 0; i <= a.length; i++){
+    if(p > a.length || p < 0){
+        out = 'error, position out of range or negative';
+        break;
+    }
     if(i === p){
         out[j] = e;
         j++;
-        out[j] = a[i];
-        j++;
+        if(i !== a.length){
+            out[j] = a[i];
+            j++;
+        } else {
+            break;
+        }
     } else {
-        out[j] = a[i];
-        j++;
+        if(a[i] !== undefined){
+            out[j] = a[i];
+            j++;
+        }
     }
 }
 
