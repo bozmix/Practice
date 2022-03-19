@@ -119,17 +119,72 @@ console.log(chart(5,3,7));
 
 /*
 Write a program that calculates a number of digits of a given number. 
+*/
 
-
+function numOfDigits (a){
+    out = 0;
+    for(var i = 1; a >= 1; i++){
+        out += 1;
+        a /= 10;
+    }
+    return out
+}
+console.log(numOfDigits(10000000));
+/*
 Write a program that calculates a number of appearances of a given number in a given array.
 Inputs: a = [2, 4, 7, 8, 7, 7, 1], e = 7
 Result: 3
- 
+*/
+
+function repeat (a, e) {
+    var out = 0;
+    for(var i = 0; i < a.length; i++){
+        a[i] === e ? out++ : out;
+    }
+    return out
+}
+console.log(repeat([2, 4, 7, 8, 7, 7, 1], 7));
+
+/*
 Write a program that calculates the sum of odd elements of a given array. 
+*/
+var s = [2, 4, 7, 8, 7, 7, 1];
 
+function sumOfOdds (a){
+    var sum = 0;
+    for(var i = 0; i < a.length; i++){
+        a[i] % 2 !== 0 ? sum += a[i] : sum;
+    }
+    return sum
+}
+console.log(sumOfOdds(s));
 
+/*
 Write a program that calculates the number of appearances of a letter a in a given string. Modify the program so it calculates the number of both letters a and A.
+*/
 
+function numberOfAs (s) {
+    var num = 0;
+    for(var i = 0; i < s.length; i++){
+        if(s[i] === 'a' || s[i] === 'A'){
+            num++;
+        }
+    }
+    return num
+}
 
+console.log(numberOfAs('Write a program that calculates the number of appearances of a letter a in a given string. Modify the program so it calculates the number of both letters a and A'));
+
+/*
 Write a program that concatenates a given string given number of times. For example, if “abc” and 4 are given values, the program prints out abcabcabcabc. 
 */
+
+function repeat (s, n){
+    var out = '';
+    for(var i = 0; i < n; i++){
+        out += s;
+    }
+    return out
+}
+
+console.log(repeat('abc',6))
