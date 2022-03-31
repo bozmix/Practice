@@ -251,3 +251,20 @@ function theMostFrequent (a){
     return 'the element \'' + a[index] + '\' is the most frequent in the array and it appears ' + max + ' times';
 }
 console.log(theMostFrequent([3, 'a', 'a', 'a', 2, 3, 'a', 3, 'a', 2, 4, 9, 3]));
+/*
+Please write a function or explain how would you find two elements in an array of integer numbers (e.g. array = [1, 3, 1, 2, 8, 4]) that add up to some number K (e.g. K=7). The function should accept parameters: array (e.g. array = [1, 3, 1, 2, 8, 4]) and K (e.g. K=7), and return appropriate two elements (e.g. [3, 4]). If there are no two elements that can make number K in total, it should return null. Also, the function should not have more than one loop in it. *
+*/
+
+
+let input = [3, 5, 7, 9, 4, 8, 5, 12, 4, 9, 16, 5];
+let dSum = 13;
+let set = new Set();
+
+for(item of input) {
+  let num = dSum - item;
+  if(set.has(num)) {
+    console.log(num + " " + item);
+    break;
+  }
+  set.add(item);
+}
