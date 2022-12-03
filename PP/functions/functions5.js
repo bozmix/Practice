@@ -148,10 +148,28 @@ sort(a);
 (skip :))Sort a previously defined array in a descending order and display it in the console.
 Input:  [ 13, 11, 15, 5, 6, 1, 8, 12 ]
 Output: [ 15, 13, 12, 11, 8, 6, 5, 1 ]
-	
+*/
+/*	
 Write a program that uses a loop to add all the even numbers from 1 to 1000 and subtracts all the odd numbers 1 to 500 from the calculated sum. The result should then be multiplied by 12.5 and displayed in console.
 Output: 2350000
+*/
 
+function program (){
+    let sum = 0;
+    let output = 0;
+    for (let i = 1; i <= 1000; i++) {
+        if (i % 2 === 0) {
+            sum += i;
+        } else if (i <= 500) {
+            sum -= i;
+        }
+    }
+    output = 12.5 * sum;
+    return output
+}
+
+console.log(program());
+/*
 Define a 10 element array. Take the first two letters from every string (that has at least 2 letters) in the array and create a new string from them. Print it out in the console.
 Input: [ "M", "Anne", 12, "Steve", "Joe", "John", "David", "Mark", true, "A" ]
 
