@@ -93,7 +93,7 @@ function grade (s, p) {
     }
     return out
 }
-console.log(grade([ "Micahel", "Anne", "Frank", "Joe", "John", "David", "Mark", "Bill" ], [ 50, 39, 63, 72, 99, 51, 83, 59 ]));
+console.log(grade(students, points));
 
 /*
 (skip :))Sort a previously defined array. Place its sorted values into a new array whose values are equivalent to the first array's values multiplied by 2.
@@ -174,8 +174,18 @@ Define a 10 element array. Take the first two letters from every string (that ha
 Input: [ "M", "Anne", 12, "Steve", "Joe", "John", "David", "Mark", true, "A" ]
 
 Output: AnStJoJoDaMa
-
-	
+*/
+function takeTwoLetters (a) {
+    let out = '';
+    for (let i = 0; i < a.length; i++) {
+        if (typeof a[i] === 'string' && a[i].length >= 2) {
+            out += a[i][0] + a[i][1];
+        }
+    }
+    return out
+}
+console.log(takeTwoLetters([ "M", "Anne", 12, "Steve", "Joe", "John", "David", "Mark", true, "A" ]));
+/*	
 Write a program that takes a string and prints its characters out in reversed order in the console.
 Input:  Belgrade Institute of Technology
 Output: ygolonhceT fo etutitsnI edargleB
