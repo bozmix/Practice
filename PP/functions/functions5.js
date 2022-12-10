@@ -189,7 +189,17 @@ console.log(takeTwoLetters([ "M", "Anne", 12, "Steve", "Joe", "John", "David", "
 Write a program that takes a string and prints its characters out in reversed order in the console.
 Input:  Belgrade Institute of Technology
 Output: ygolonhceT fo etutitsnI edargleB
+*/
+function reverse (s) {
+    let out = '';
+    for(let i = 0; i < s.length; i++){
+        out += s[s.length-1-i];
+    }
+    return out
+}
 
+console.log(reverse('Belgrade Institute of Technology'));
+/*
 Write a program that displays all the combinations of two numbers between 1 and 7. Don't display two of the same numbers at the same time. Display the number of possible combinations, as well. (E.g. (1.2),(2,1) is allowed, but not (1,1), (2,2)...).
 
 Write a program that checks if the entered number is a prime number (i.e. divisible only by 1 and by itself).
