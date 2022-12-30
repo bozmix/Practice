@@ -201,7 +201,25 @@ function reverse (s) {
 console.log(reverse('Belgrade Institute of Technology'));
 /*
 Write a program that displays all the combinations of two numbers between 1 and 7. Don't display two of the same numbers at the same time. Display the number of possible combinations, as well. (E.g. (1.2),(2,1) is allowed, but not (1,1), (2,2)...).
+*/
 
+function combination () {
+    let counter = 0;
+    let out = '';
+    for(let i = 1; i <= 7; i++){
+        for(let j = 1; j <= 7; j++){
+            if(j != i){
+                counter++;
+                out += '(' + i + ', ' + j + '), ';
+            }
+        }
+    }
+    console.log('The number of posible combinations is ' + counter);
+    return out
+}
+
+console.log(combination());
+/*
 Write a program that checks if the entered number is a prime number (i.e. divisible only by 1 and by itself).
 Input:  17    | 15
 Output: true  | false
