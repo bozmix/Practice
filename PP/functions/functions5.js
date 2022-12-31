@@ -223,12 +223,57 @@ console.log(combination());
 Write a program that checks if the entered number is a prime number (i.e. divisible only by 1 and by itself).
 Input:  17    | 15
 Output: true  | false
-	
+*/
+
+let checkPrime = function (n) {
+    let out;
+    if(n % 2 === 0 || n % 3 === 0 || n % 5 === 0 || n % 7 === 0){
+        out = false;
+    } else {
+        out = true;
+    }
+    return out
+}
+
+console.log(checkPrime(259));
+
+/*
 Check if a given string is a palindrome (spaces are ignored).
 Input:  eye  | Geek  | a nut for a jar of tuna
 Output: true | false | true
+*/
 
+function isPalindrome (s) {
+    let out;
+    let s1 = '';
+    for (let i = 0; i < s.length; i++) {
+        let j = 0;
+        if (s[i] !== ' ') {
+            s1 += s[i];
+        }        
+    }
+    for (let i = 0; i < s1.length; i++) {
+        if (s1[i] !== s1[s1.length - i - 1]) {
+            out = false;
+            break;
+        } else {
+            out = true;
+        }
+    }
+    return out
+}
+console.log(isPalindrome('a nut for a jar of tuna'));
+/*
 Write a program that calculates the greatest common divisor of two integers. Note: The greatest common divisor of two non-zero integers is the greatest positive number that divides both numbers with no remainder.
 Input:  192 42 | 81 9
 Output: 6      | 9
 */
+
+function findCommonDivisor (n, k) {
+    let min = 1;
+    let out;
+    n <= k ? min = n : min = k;
+    for (let i = 0; i < min; i++) {
+        if ()
+    }
+}
