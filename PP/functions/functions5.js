@@ -271,9 +271,14 @@ Output: 6      | 9
 
 function findCommonDivisor (n, k) {
     let min = 1;
-    let out;
+    let out = 1;
     n <= k ? min = n : min = k;
-    for (let i = 0; i < min; i++) {
-        if ()
+    for (let i = 0; i <= min; i++) {
+        if (n % i === 0 && k % i === 0) {
+            out = i;
+        }
     }
+    return out
 }
+
+console.log(findCommonDivisor(81,9));
