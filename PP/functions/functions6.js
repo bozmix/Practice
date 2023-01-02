@@ -58,10 +58,25 @@ console.log(combine(['a','b','c'], [1,2,3]));
 Write a function that rotates a list by k elements.
 
 For example [1,2,3,4,5,6] rotated by two becomes [3,4,5,6,1,2]
-
+*/
  
+function rotate (a, k) {
+    let out = [];
+    for (let i = 0; i < a.length; i++) {
+        if (i > k - 1) {
+            out[i - k] = a[i];
+            //console.log(i, out, 'iz prvog dela if');
+        } else {
+            out[a.length - k + i] = a[i];
+            //console.log(i, out, 'iz drugog dela if');
+        }
+    }
+    return out
+}
 
+console.log(rotate([1,2,3,4,5,6], 2));
 
+/*
 Write a function that takes a number and returns array of its digits.
 
  
