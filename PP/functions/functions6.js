@@ -104,20 +104,36 @@ console.log(makeArray(1543658));
 
 /*
 Write a program that prints a multiplication table for numbers up to 12.
+*/
 
- 
+function printTable () {
+    for (let i = 1; i <= 12; i++) {
+        for (let j = 1; j <= 12; j++) {
+            console.log(i + ' x ' + j + ' = ' + (i * j));
+        }
+    }
+}
 
+printTable();
 
+/*
 Write a function to input temperature in Centigrade and convert to Fahrenheit.
+*/
 
- 
+function toFahrenheit (t) {
+    let f = (t * 1.8) + 32;
+    return f
+}
 
+console.log(toFahrenheit(-40));
 
+/*
 Write a function to find the maximum element in array of numbers. Filter out all non-number elements.
+*/
 
- 
 
 
+/*
 Write a function to find the maximum and minimum elements. Function returns an array.
 
  
