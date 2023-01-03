@@ -78,10 +78,31 @@ console.log(rotate([1,2,3,4,5,6], 2));
 
 /*
 Write a function that takes a number and returns array of its digits.
-
+*/
  
+function makeArray (n) {
+    let out = [];
+    let dout = [];
+    let i = 0;
+    let a = 1;
+    let d = n;
+    let j = 0;
+    while (d > 0.9) {
+        i = d / 10;
+        a = d % 10;
+        out[j] = a;
+        j++;
+        d = i - (a * 0.1);
+    }
+    for (let k = 0; k < out.length; k++) {
+        dout[out.length - 1 - k] = out[k];
+    }
+    return dout
+}
 
+console.log(makeArray(1543658));
 
+/*
 Write a program that prints a multiplication table for numbers up to 12.
 
  
