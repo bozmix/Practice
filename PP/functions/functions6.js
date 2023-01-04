@@ -131,19 +131,61 @@ console.log(toFahrenheit(-40));
 Write a function to find the maximum element in array of numbers. Filter out all non-number elements.
 */
 
+function findMax (a) {
+    let max = 1;
+    let out = [];
+    let j = 0;
+    for (let i = 0; i < a.length; i++) {
+        if (typeof a[i] === 'number') {
+            out[j] = a[i];
+            j++;
+            if (a[i] > max) {
+                max = a[i];
+            }   
+        }
+    }
+    return [out, max]
+}
 
+console.log(findMax([1, 3, 5, 65, 25, 'none', true, 60]));
 
 /*
 Write a function to find the maximum and minimum elements. Function returns an array.
+*/
+console.log(maxAndMin([2, 3, 5, 65, 25, 60]));
 
- 
+function maxAndMin (a) {
+    let max = 0;
+    let min = Infinity;
+    for (let i = 0; i < a.length; i++) {
+        if (a[i] > max) {
+            max = a[i];
+        } 
+        if (a[i] < min) {
+            min = a[i];
+        }
+    }
+    return [min, max]
+}
 
 
+/*
 Write a function to find the median element of array.
+*/
 
- 
+function median (a) {
+    let med;
+    if (a.length % 2 === 0){
+        med = (a[a.length / 2 - 1] + a[a.length / 2]) / 2;
+    } else {
+        med = a[a.length / 2 - 0.5];
+    }
+    return med
+}
 
+console.log(median([2, 3, 5, 65, 25, 60, 20]))
 
+/*
 Write a function to find the element that occurs most frequently.
 
  
