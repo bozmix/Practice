@@ -125,7 +125,7 @@ function toFahrenheit (t) {
     return f
 }
 
-console.log(toFahrenheit(-40));
+console.log(toFahrenheit(0));
 
 /*
 Write a function to find the maximum element in array of numbers. Filter out all non-number elements.
@@ -230,3 +230,42 @@ For example the list ["Hello", "World", "in", "a", "frame"] gets printed as:
 * frame *
 *********
 */
+function printInFrame (a) {
+    let wordLength = 0;
+    let lineLength;
+    let out = '';
+    for (let i = 0; i < a.length; i++) {
+        if (a[i].length > wordLength) {
+            wordLength = a[i].length;
+        }
+    }
+    lineLength = wordLength + 4;
+    let normalizedWords = [];
+    let normalizedWord = '* ';
+    for (let i = 0; i < a.length; i++) {
+        let word = a[i];
+        normalizedWord += word;
+        for (let j = normalizedWord.length - 1; (j < lineLength - 2 && j >= normalizedWord.length - 2); j++) {
+            normalizedWord += ' ';
+        }
+        normalizedWord += '*';
+        normalizedWords[i] = normalizedWord;
+        normalizedWord = '* ';
+    }
+    //console.log(normalizedWords);
+    
+    let firstLine = '';
+    
+    for (let i = 0; i < lineLength; i++) {
+        firstLine += '*';
+    }
+    //console.log(firstLine);
+    out = firstLine + '\n';
+    for (let i = 0; i < normalizedWords.length; i++) {
+        out += normalizedWords[i] + '\n';
+    }
+    out += firstLine;
+    console.log(out)
+}
+
+printInFrame(["Hello", "World", "in", "a", "frame"]);
