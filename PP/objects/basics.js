@@ -43,3 +43,27 @@ Add a method that checks if a meal can be prepared for 15 minutes.
 Add a method that changes the type of cuisine to the given value. 
 Add a method that delete a given ingredient from the list of ingredients.  
 */
+
+let Hero = function (name) {
+    this.name = name;
+    this.occupation = 'ninja';
+    this.say = function () {
+        return 'Hi, my name is ' + this.name + ' and I am a ' + this.occupation;
+    }
+}
+
+let hero1 = new Hero('Donatelo');
+let hero2 = new Hero('Leonardo');
+console.log(hero1.say());
+console.log(hero2.say());
+
+function Meal (name, ingredients) {
+    this.name = name;
+    this.ingredients = ingredients;
+    this.writeRecipe = function () {
+        return 'you mix ' + this.ingredients + ' and you get ' + this.name
+    }
+};
+
+let beans = new Meal ('bean', 'bean, flour, water, salt, chilli');
+console.log(beans.writeRecipe());
