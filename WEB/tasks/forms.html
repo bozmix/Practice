@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forms</title>
+</head>
+<body>
+    <form action="www.smth.com" method="get" style="border: 1px solid black; padding: 5px; margin: 10px;">
+        <label for="username">Username:</label>
+        <input type="text" size="20" maxlength="25" name="username" required placeholder="username">
+        <br><br>
+        <label for="password">Password:</label>
+        <input name="password" type="password" required size="20" maxlength="20" placeholder="password">
+        <br><br>
+        <input type="submit" name="submit" value="submit">
+        <br><br>
+        <a href="./resetPass.html">Forgot password?</a>
+    </form>
+    <form action="www.smth.com" method="get" style="border: 1px solid blue;padding: 5px; margin: 10px;">
+        <label for="first">1. This is the first question of the test. Pick some answer:</label><br>
+        <input type="radio" name="first" value="first answer">First answer<br>
+        <input type="radio" name="first" value="second answer">Second answer <br>
+        <input type="radio" name="first" value="third answer">Third answer<br><br>
+
+        <label for="second">2. This is the second question of the test. You can pick more than one answer:</label><br>
+        <input type="checkbox" name="second" value="first checkbox of second question">first checkbox of the second question<br>
+        <input type="checkbox" name="second" value="secondCheckbox">Second checkBox<br>
+        <input type="checkbox" name="second" value="thirdAnswer" >Third checkbox<br><br>
+
+        <label for="third">3. This is the third and the last question of the test. Please write a few senteces:</label><br>
+        <textarea name="third" cols="70" rows="10" placeholder="Write your answer here..."></textarea><br>
+
+        <input type="reset" value="reset form">
+    </form>
+</body>
+</html>
